@@ -11,7 +11,7 @@
 | Routing | Vue Router 4 |
 | Charts | Chart.js + vue-chartjs |
 | Icons | Material Design Icons (@mdi/font) |
-| Backend API Layer | Laravel 8 (`backend/`) |
+| Backend API Layer | Laravel 10 (`backend/`) |
 
 ## Directory Structure
 
@@ -64,14 +64,14 @@ User Interaction
       └──► (planned) HTTP API calls to Laravel backend (`/backend`)
                    │
                    ▼
-              Laravel 8 app (routes, controllers, models, DB)
+              Laravel 10 app (routes, controllers, models, DB)
 ```
 
 ## Backend Layer (Laravel)
 
 - Directory: `/backend`
-- Framework: Laravel 8
-- PHP compatibility: `^7.3|^8.0` (supports PHP `< 8.1` target environments)
+- Framework: Laravel 10
+- PHP compatibility: `^8.1`
 - Current status: scaffolded and ready for API integration
 
 See [`docs/laravel-backend.md`](./laravel-backend.md) for setup details.

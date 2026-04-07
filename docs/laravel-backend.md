@@ -1,4 +1,4 @@
-# Laravel Backend Setup (XAMPP / PHP < 8.1)
+# Laravel Backend Setup (XAMPP / PHP 8.1)
 
 This project includes a Laravel backend scaffold in:
 
@@ -6,8 +6,8 @@ This project includes a Laravel backend scaffold in:
 
 ## Version Choice
 
-- Backend uses **Laravel 8**.
-- `backend/composer.json` requires `php: ^7.3|^8.0`, which supports XAMPP environments running PHP 8.0.x.
+- Backend uses **Laravel 10** (max, per current steering).
+- `backend/composer.json` requires `php: ^8.1`.
 
 ## Local Setup
 
@@ -22,7 +22,7 @@ php artisan serve --host=127.0.0.1 --port=8000
 
 ## XAMPP Setup (Windows)
 
-1. Use a XAMPP build with **PHP 8.0.x**.
+1. Use a XAMPP build with **PHP 8.1.x**.
 2. Place or clone repository in `htdocs` (example: `C:\xampp\htdocs\TestPOS-2.0`).
 3. Open terminal in `backend/` and run:
    - `composer install`
@@ -44,6 +44,6 @@ composer audit
 
 ## Security Note
 
-Composer currently reports one Laravel advisory (`CVE-2025-27515`) for versions below Laravel 10.48.29.
+Laravel 10.50.x is currently installed and satisfies the advisory floor for `CVE-2025-27515` (fixed in Laravel 10.48.29+).
 
-Given the explicit PHP `< 8.1` requirement, Laravel 10+ cannot be used without breaking compatibility. If the environment is upgraded to PHP 8.1+, upgrade framework to Laravel 10.48.29+ immediately.
+If you keep the “Laravel 10 max” steering, continue patching within the 10.x line.
