@@ -2,7 +2,7 @@
 
 This project includes a Laravel backend scaffold in:
 
-`/home/runner/work/TestPOS-2.0/TestPOS-2.0/backend`
+`<project-root>/backend`
 
 ## Version Choice
 
@@ -12,7 +12,7 @@ This project includes a Laravel backend scaffold in:
 ## Local Setup
 
 ```bash
-cd /home/runner/work/TestPOS-2.0/TestPOS-2.0/backend
+cd <project-root>/backend
 composer install
 cp .env.example .env
 php artisan key:generate

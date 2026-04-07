@@ -16,7 +16,7 @@ TestPOS 2.0 includes:
 ## Frontend Quick Start
 
 ```bash
-cd /home/runner/work/TestPOS-2.0/TestPOS-2.0
+cd <project-root>
 npm install
 npm run dev
 ```
@@ -24,7 +24,7 @@ npm run dev
 ## Backend Quick Start (Laravel 8)
 
 ```bash
-cd /home/runner/work/TestPOS-2.0/TestPOS-2.0/backend
+cd <project-root>/backend
 composer install
 cp .env.example .env
 php artisan key:generate
