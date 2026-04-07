@@ -1,58 +1,54 @@
-# TestPOS 2.0 — Farm Point of Sales System
+# TestPOS 2.0
 
-A modern, web-based Point of Sales application built with **Vue 3 + Vite + Vuetify 3**.
+TestPOS 2.0 includes:
 
-## Features
+- **Frontend:** Vue 3 + Vite + Vuetify POS app at repository root
+- **Backend:** Laravel 8 scaffold in `/backend` (XAMPP-capable, PHP 8.0 compatible)
 
-- **3 User Roles**: Admin, Accounting, Cashier (role-based access control)
-- **POS Terminal**: Product catalog with search/filter, cart management, payment processing (Cash, Card, GCash)
-- **Dashboard**: Real-time stats, quick actions, recent transactions
-- **Reports**: Date range filtering, Chart.js sales charts, CSV export (Admin & Accounting)
-- **User Management**: Add/edit/deactivate users (Admin only)
-- **3 Themes**: Dawn (light), Dusk (dark), AMOLED — all Forest Green (#228B22) primary
-- **Security**: 180-second inactivity auto-logout with 30-second warning dialog
+## Stack
 
-## Tech Stack
-
-| | |
+| Layer | Technology |
 |---|---|
-| Framework | Vue 3 (Composition API) |
-| Build Tool | Vite 5 |
-| UI Library | Vuetify 3 (Material Design) |
-| State | Pinia |
-| Router | Vue Router 4 |
+| Frontend | Vue 3, Vite 8, Vuetify 3, Pinia, Vue Router 4 |
+| Backend | Laravel 8 |
 | Charts | Chart.js |
 
-## Quick Start
+## Frontend Quick Start
 
 ```bash
+cd /home/runner/work/TestPOS-2.0/TestPOS-2.0
 npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` and log in with a demo account:
-
-| Username | Password | Role |
-|----------|----------|------|
-| `admin` | `admin123` | Administrator |
-| `accounting` | `acc123` | Accounting |
-| `cashier` | `cash123` | Cashier |
-
-## Build for Production
+## Backend Quick Start (Laravel 8)
 
 ```bash
-npm run build
+cd /home/runner/work/TestPOS-2.0/TestPOS-2.0/backend
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve --host=127.0.0.1 --port=8000
 ```
+
+## XAMPP Note
+
+- Laravel backend is pinned to **v8** for PHP `< 8.1` compatibility targets.
+- Recommended XAMPP PHP version: **8.0.x**.
+
+Detailed setup is documented at [docs/laravel-backend.md](./docs/laravel-backend.md).
+
+## Current Integration Status
+
+- Frontend currently uses mock auth and local storage.
+- Laravel backend is scaffolded and ready for API integration in follow-up work.
 
 ## Documentation
 
 - [Architecture Overview](./docs/architecture.md)
+- [Laravel Backend Setup](./docs/laravel-backend.md)
 - [User Manual](./docs/user-manual.md)
 - [API Reference (Pinia Stores)](./docs/api-reference.md)
 - [Contributing Guide](./collaboration/CONTRIBUTING.md)
 - [Changelog](./collaboration/CHANGELOG.md)
 - [Wiki Setup](./wiki/README.md)
-
----
-
-© 2025 FarmsCore Inc. — TestPOS 2.0

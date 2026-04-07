@@ -11,6 +11,7 @@
 | Routing | Vue Router 4 |
 | Charts | Chart.js + vue-chartjs |
 | Icons | Material Design Icons (@mdi/font) |
+| Backend API Layer | Laravel 8 (`backend/`) |
 
 ## Directory Structure
 
@@ -48,6 +49,34 @@ src/
 ```
 
 ## Data Flow
+
+```
+User Interaction
+      │
+      ▼
+  Vue Components (Views/Layouts)
+      │
+      ▼
+  Pinia Stores (auth, pos, theme, reports)
+      │
+      ├──► localStorage  (persists: user session, transactions, theme)
+      │
+      └──► (planned) HTTP API calls to Laravel backend (`/backend`)
+                   │
+                   ▼
+              Laravel 8 app (routes, controllers, models, DB)
+```
+
+## Backend Layer (Laravel)
+
+- Directory: `/backend`
+- Framework: Laravel 8
+- PHP compatibility: `^7.3|^8.0` (supports PHP `< 8.1` target environments)
+- Current status: scaffolded and ready for API integration
+
+See [`docs/laravel-backend.md`](./laravel-backend.md) for setup details.
+
+## Frontend Data Flow (Current)
 
 ```
 User Interaction
