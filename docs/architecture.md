@@ -5,7 +5,7 @@
 | Layer | Technology |
 |-------|-----------|
 | Frontend Framework | Vue 3 (Composition API) |
-| Build Tool | Vite 5 |
+| Build Tool | Vite 8 |
 | UI Component Library | Vuetify 3 (Material Design) |
 | State Management | Pinia |
 | Routing | Vue Router 4 |
